@@ -1,10 +1,9 @@
 # PowerShell Arduino Module
-This module provides a suite of functions that allows you to interact with your Arduino through Windows PowerShell.
+This module provides a suite of Windows PowerShell functions that allows you to interact with your Arduino through a commandline from a Windows computer.
 
-The module was created because I was struggling to find a way to use my console editor (vim) and compile/upload/etc my arduino code from Windows.  Currently, I'm adding functions as I need them while working through the University of California, Irvine Arduino course entitled "[The Arduino Platform and C Programming](https://www.coursera.org/learn/arduino-platform)".
 
 # Requirements
-Compile and upload functionality relies on [Arduino IDE](https://www.arduino.cc/en/Main/Software).  This must be installed prior to using verify or upload commands. 
+Compile and upload functionality currently relies on [Arduino IDE](https://www.arduino.cc/en/Main/Software).  This must be installed prior to using the Invoke-ArduinoVerify and Invokke-ArduinoUpload functions.
 
 # Usage
 
@@ -46,6 +45,6 @@ Set-ArduinoPort COM4
 
 # Additional Notes
 
-You must install [Arduino IDE](https://www.arduino.cc/en/Main/Software) in order to use this module.
+I highly recommend taking the Coursera course from the University of California, Irvine entitled "[The Arduino Platform and C Programming](https://www.coursera.org/learn/arduino-platform)".  This was the course I took that made me write the WinArduino module.
 
-The docs for the Arduino IDE commandline can be found [here](https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc)
+Some of the functionality of this module relies on the Arduino IDE commandline interface.  What is possible is documented [here](https://github.com/arduino/Arduino/blob/master/build/shared/manpage.adoc).  If I'm missing some functionality you need, please drop me a note in the Issues or feel free to make pull requests.
