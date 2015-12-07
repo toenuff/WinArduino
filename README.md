@@ -43,6 +43,32 @@ Set-ArduinoPort COM4
 
 * Note on Windows arduino_debug.exe is the executable you should use for commandline interactions.
 
+WinArduino provides a native way of connecting, reading, and writing to a serial connection to the Arduino.  The code in /examples shows an end-to-end example including the upload of exaple arduino sketches that will illustrate how you can use WinArduino to control and debug your Arduino.  The following snippets show quick examples of the available cmdlets for interacting with the serial interfaces:
+
+Reading can be done with Read-ArduinoSerial:
+```powershell
+$serial = Connect-ArduinoSerial
+$data = $serial |Read-ArduinoSerial
+$data
+```
+
+You can start a real-time stream of the data coming from the Arduino by using Receive-ArduinoSerial:
+```powershell
+$serial |Receive-ArduinoSerial
+```
+
+You can write data to the Arduino with Write-ArduinoSerial:
+```powershell
+$serial |Write-ArduinoSerial 1
+$serial |Write-ArduinoSerial 'Complex strings'
+$serial |Write-ArduinoSerial ([byte[]]@(32, 20, 255, 8, 15))
+```
+
+You can disconnect all serial sessions with the following:
+```powershell
+Get-ArduinoSerial |Disconnect-ArduinoSerial
+```
+
 # Additional Notes
 
 I highly recommend taking the Coursera course from the University of California, Irvine entitled "[The Arduino Platform and C Programming](https://www.coursera.org/learn/arduino-platform)".  This was the course I took that made me write the WinArduino module.
