@@ -3,7 +3,7 @@ This module provides a suite of Windows PowerShell functions that allows you to 
 
 
 # Requirements
-Compile and upload functionality currently relies on [Arduino IDE](https://www.arduino.cc/en/Main/Software).  This must be installed prior to using the Invoke-ArduinoVerify and Invokke-ArduinoUpload functions.
+Compile and upload functionality currently relies on [Arduino IDE](https://www.arduino.cc/en/Main/Software).  This must be installed prior to using the Invoke-ArduinoVerify and Invoke-ArduinoUpload functions.
 
 # Usage
 
