@@ -23,6 +23,7 @@ function Set-ArduinoPort {
         [Parameter(Mandatory=$true, position=0)]
         [string] $Port='COM3'
     )
+    $GLOBAL:arduinoport=$port
 }
 
 function Invoke-ArduinoIdeVerify {
